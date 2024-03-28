@@ -1,7 +1,7 @@
 .footer {
   width: 100%;
   max-width: 880px;
-  margin: 67px 0 60px 0;
+  margin: 67px auto 60px;
 }
 
 .footer__copyright {
@@ -10,16 +10,18 @@
   font-size: 18px;
   line-height: 22px;
   color: #545454;
+  margin: 0;
+  line-height: 22px;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
   .footer {
-    margin: 0;
+    margin-top: 48px;
+    margin-bottom: 36px;
   }
 
   .footer__copyright {
     max-width: 282px;
     font-size: 14px;
-    padding-left: 19px;
   }
 }
