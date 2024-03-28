@@ -16,6 +16,6 @@ This is the third project of the Software Engineering program at TripleTen. It w
 
 Link to my screen recording discussing my project, methodologies used, and challenges I cam across is https://drive.google.com/file/d/1f9p0tXmmBwbtbdBUHC40TX5jcmdcRyFc/view?usp=sharing.
 
-## Link to Git Hub
+## Link to Git Hub Pages
 
-https://github.com/kendrafray/se_project_aroundtheus
+https://kendrafray.github.io/se_project_aroundtheus/
