@@ -5,8 +5,6 @@
 }
 
 .page__content {
-  padding-left: 20px;
-  padding-right: 20px;
   margin: 0 auto;
   max-width: 880px;
   width: 100%;
@@ -16,18 +14,8 @@
   position: relative;
 }
 
-@media screen and (max-width: 600px) {
-  .page__section {
-    align-items: center;
-    margin: 0 auto;
-    padding-left: 19px;
-    padding-right: 19px;
-  }
-}
-
-@media screen and (min-width: 800px) and (max-width: 1000px) {
-  .page__section {
-    padding-left: 20px;
-    padding-right: 20px;
+@media screen and (max-width: 580px) {
+  .page__content {
+    max-width: 320px;
   }
 }
