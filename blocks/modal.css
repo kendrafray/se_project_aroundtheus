@@ -8,6 +8,7 @@
   z-index: 999;
   display: flex;
   padding: 19px;
+  visibility: hidden;
 }
 
 .modal__container {
@@ -22,7 +23,7 @@
 }
 
 .modal__opened {
-  /*display: flex;*/
+  visibility: visible;
 }
 
 .modal__close {
