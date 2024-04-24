@@ -95,7 +95,7 @@
 @media screen and (max-width: 635px) {
   .modal__container {
     max-width: 282px;
-    max-height: 382px;
+    max-height: 322px;
   }
 
   .modal__heading {
