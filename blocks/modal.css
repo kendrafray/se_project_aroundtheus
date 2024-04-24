@@ -12,6 +12,7 @@
 }
 
 .modal__container {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   padding: 36px;
@@ -19,10 +20,11 @@
   margin: auto;
   border-radius: 10px;
   position: relative;
-  width: 430px;
+  width: 100%;
+  max-width: 430px;
 }
 
-.modal__opened {
+.modal_opened {
   visibility: visible;
 }
 
@@ -67,8 +69,8 @@
   font-family: "Inter", Arial, sans-serif;
   font-weight: 400;
   font-size: 14px;
-  line-height: 17px;
-  margin-bottom: 30px;
+  line-height: 16px;
+  margin-bottom: 48px;
   width: 100%;
   padding-bottom: 13px;
 }
@@ -82,7 +84,6 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
-  margin-top: 48px;
   border: none;
   border-radius: 2px;
 }
@@ -94,8 +95,9 @@
 
 @media screen and (max-width: 635px) {
   .modal__container {
-    max-width: 282px;
-    max-height: 322px;
+    min-width: 282px;
+    min-height: 322px;
+    padding: 22px;
   }
 
   .modal__heading {
@@ -107,6 +109,7 @@
 
   .modal__input {
     width: 100%;
+    margin-bottom: 45px;
     padding-bottom: 13px;
   }
 
@@ -115,7 +118,6 @@
     height: 46px;
     font-size: 14px;
     line-height: 17px;
-    margin-top: 48px;
   }
 
   .modal__close {
