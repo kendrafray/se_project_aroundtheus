@@ -54,7 +54,7 @@
   font-size: 24px;
   line-height: 30px;
   margin: 0;
-  padding-bottom: 54px;
+  padding-bottom: 50px;
 }
 
 .modal__form {
@@ -64,13 +64,13 @@
 
 .modal__input {
   border: none;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(86, 13, 13, 0.2);
   color: #000;
   font-family: "Inter", Arial, sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
-  margin-bottom: 48px;
+  margin-bottom: 29px;
   width: 100%;
   padding-bottom: 13px;
 }
@@ -86,6 +86,7 @@
   line-height: 22px;
   border: none;
   border-radius: 2px;
+  margin-top: 12px;
 }
 
 .modal__button:hover {
@@ -109,7 +110,7 @@
 
   .modal__input {
     width: 100%;
-    margin-bottom: 45px;
+    margin-bottom: 30px;
     padding-bottom: 13px;
   }
 
