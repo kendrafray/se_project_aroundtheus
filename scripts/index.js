@@ -32,7 +32,7 @@ const profileEditModal = document.querySelector("#profile-edit-modal");
 const profileEditCloseButton = profileEditModal.querySelector(
   "#profile-close-button"
 );
-const profileEditCloseModal = document.querySelector(".modal__close");
+const profileEditCloseModal = document.querySelector("#profile-edit-modal");
 const profileTitle = document.querySelector(".profile__title");
 const profileDescription = document.querySelector(".profile__description");
 const profileTitleInput = document.querySelector("#profile-title-input");
@@ -88,6 +88,7 @@ function handleAddFormSubmit(evt) {
   const name = cardTitleInput.value;
   const link = cardLinkInput.value;
   renderCard({ name, link }, cardListEl);
+  addCardForm.reset();
   closePopup(addCardModal);
 }
 
