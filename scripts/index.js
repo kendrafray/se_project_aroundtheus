@@ -35,9 +35,9 @@ const profileEditCloseButton = profileEditModal.querySelector(
 const profileEditCloseModal = document.querySelector("#profile-edit-modal");
 const profileTitle = document.querySelector(".profile__title");
 const profileDescription = document.querySelector(".profile__description");
-const profileTitleInput = document.querySelector("#profile-title-input");
+const profileTitleInput = document.querySelector("#profile-title-enter");
 const profileDescriptionInput = document.querySelector(
-  "#profile-description-input"
+  "#profile-description-enter"
 );
 const addNewCardButton = document.querySelector(".profile__add-button");
 const addCardModal = document.querySelector("#add-card-modal");
@@ -59,16 +59,39 @@ const modalImageCloseButton = previewImageModal.querySelector(
 
 //Functions
 
+//close//
 function closePopup(modal) {
   modal.classList.remove("modal_opened");
+  document.removeEventListener("keyup", handleEscapeKey);
+  modal.removeEventListener("mousedown", closeModalOnClick);
 }
 
+//edit profile and add new card//
 function openPopup(modal) {
   modal.classList.add("modal_opened");
+  document.addEventListener("keyup", (event) => handleEscapeKey(event, modal));
+  modal.addEventListener("mousedown", closeModalOnClick);
 }
 
+//enlarge card image//
 function openModal(modal) {
   modal.classList.add("modal_opened");
+  document.addEventListener("keyup", (event) => handleEscapeKey(event, modal));
+  modal.addEventListener("mousedown", closeModalOnClick);
+}
+
+//escape key to close //
+function handleEscapeKey(event, popup) {
+  if (event.key === "Escape") {
+    closePopup(popup);
+  }
+}
+
+//click anywhere to close//
+function closeModalOnClick(evt) {
+  if (evt.target === evt.currentTarget) {
+    closePopup(evt.currentTarget);
+  }
 }
 
 function renderCard(cardData, wrapper) {
