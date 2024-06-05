@@ -66,21 +66,14 @@ function closePopup(modal) {
   modal.removeEventListener("mousedown", closeModalOnClick);
 }
 
-//edit profile and add new card//
+//edit profile + add new card + enlarge image//
 function openPopup(modal) {
   modal.classList.add("modal_opened");
   document.addEventListener("keyup", (event) => handleEscapeKey(event, modal));
   modal.addEventListener("mousedown", closeModalOnClick);
 }
 
-//enlarge card image//
-function openModal(modal) {
-  modal.classList.add("modal_opened");
-  document.addEventListener("keyup", (event) => handleEscapeKey(event, modal));
-  modal.addEventListener("mousedown", closeModalOnClick);
-}
-
-//escape key to close //
+//escape key to close --> event listeners are added to open/close functions above//
 function handleEscapeKey(event, popup) {
   if (event.key === "Escape") {
     closePopup(popup);
@@ -95,7 +88,7 @@ function closeModalOnClick(evt) {
 }
 
 function renderCard(cardData, wrapper) {
-  cardElement = getCardElement(cardData);
+  const cardElement = getCardElement(cardData);
   wrapper.prepend(cardElement);
 }
 
@@ -136,7 +129,7 @@ function getCardElement(cardData) {
     modalImage.src = cardData.link;
     modalImage.alt = cardData.name;
     modalTitle.textContent = cardData.name;
-    openModal(previewImageModal);
+    openPopup(previewImageModal);
   });
 
   cardImageEl.src = cardData.link;
