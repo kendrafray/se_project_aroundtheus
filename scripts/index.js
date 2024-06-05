@@ -69,11 +69,12 @@ function closePopup(modal) {
 //edit profile + add new card + enlarge image//
 function openPopup(modal) {
   modal.classList.add("modal_opened");
-  document.addEventListener("keyup", (event) => handleEscapeKey(event, modal));
+  //document.addEventListener("keyup", (event) => handleEscapeKey(event, modal));//
+  document.addEventListener("keyup", handleEscapeKey);
   modal.addEventListener("mousedown", closeModalOnClick);
 }
 
-//escape key to close --> event listeners are added to open/close functions above//
+//escape key to close //
 function handleEscapeKey(event, popup) {
   if (event.key === "Escape") {
     closePopup(popup);
