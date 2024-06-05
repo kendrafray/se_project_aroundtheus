@@ -69,15 +69,15 @@ function closePopup(modal) {
 //edit profile + add new card + enlarge image//
 function openPopup(modal) {
   modal.classList.add("modal_opened");
-  //document.addEventListener("keyup", (event) => handleEscapeKey(event, modal));//
   document.addEventListener("keyup", handleEscapeKey);
   modal.addEventListener("mousedown", closeModalOnClick);
 }
 
 //escape key to close //
-function handleEscapeKey(event, popup) {
+function handleEscapeKey(event) {
+  const currentPopup = document.querySelector(".modal_opened");
   if (event.key === "Escape") {
-    closePopup(popup);
+    closePopup(currentPopup);
   }
 }
 
