@@ -137,10 +137,10 @@ function renderCard(cardData, cardListEl) {
 }
 
 function handleImageClick(cardData) {
-  previewImageEl.src = cardData.link;
-  previewImageEl.alt = cardData.name;
-  previewImageTextEl.textContent = cardData.name;
-  openModal(previewImageModal);
+  modalImage.src = cardData.link;
+  modalImage.alt = cardData.name;
+  modalTitle.textContent = cardData.name;
+  openPopup(previewImageModal);
 }
 
 modalImageCloseButton.addEventListener("click", () => {
